@@ -10,7 +10,7 @@
 	
 		<h2>Decrypt Data:</h2>
 			<input type="text" id="txt1" onkeyup="decshowtxt(this.value)" placeholder="Encrypted Message">			
-			<p>Decrypted Message: <span id="enctxt"></span></p> 
+			<p>Decrypted Message: <span id="dectxt"></span></p> 
 		
 		<br>
 			<i><b>Password is:</b> this-is-a-test-password</i>
@@ -35,10 +35,10 @@
 
 	function decshowtxt(str) {
 	  if (str.length == 0) { 
-		document.getElementById("enctxt").innerHTML = "Nothing to encrypt"; 
+		document.getElementById("dectxt").innerHTML = "Nothing to decrypt"; 
 		return;
 	  }else{
-	  document.getElementById("enctxt").innerHTML = AES.enc(str, psw);
+	  document.getElementById("dectxt").innerHTML = AES.dec(str, psw);
 	  return;
 	  }
 	}
