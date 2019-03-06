@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title>Advanced Encryption Standard</title>
+</head>
+<body>
+	<h1>Advanced Encryption Standard</h1>
+		<h2>Encrypt Data:</h2>
+			<input type="text" id="txt1" onkeyup="encshowtxt(this.value)" placeholder="Message">
+			<p>Encrypted Message: <span id="enctxt"></span></p> 
+	
+		<h2>Decrypt Data:</h2>
+			<input type="text" id="txt1" onkeyup="decshowtxt(this.value)" placeholder="Encrypted Message">			
+			<p>Decrypted Message: <span id="enctxt"></span></p> 
+		
+		<br>
+			<i><b>Password is:</b> this-is-a-test-password</i>
+
+	<footer style="margin-top:50px;">&copy; 2019 <a href='https://chaepy.net/'>Chaepy</a> - <a href='https://github.com/Chaepy/'>Github</a> - <a href='https://twitter.com/ChaepyDev'>Twitter</a></footer>
+
+
+	<script src="./aes.js"></script>
+	<script>
+	/* This is the Password for this encryption. */
+	var psw = "this-is-a-test-password";
+
+	function encshowtxt(str) {
+	  if (str.length == 0) { 
+		document.getElementById("enctxt").innerHTML = "Nothing to encrypt";
+		return;
+	  }else{
+	  document.getElementById("enctxt").innerHTML = AES.enc(str, psw);
+	  return;
+	  }
+	}
+
+	function decshowtxt(str) {
+	  if (str.length == 0) { 
+		document.getElementById("enctxt").innerHTML = "Nothing to encrypt"; 
+		return;
+	  }else{
+	  document.getElementById("enctxt").innerHTML = AES.enc(str, psw);
+	  return;
+	  }
+	}
+	</script>
+</body>
+</html>
