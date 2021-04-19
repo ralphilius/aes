@@ -16,6 +16,10 @@ decrypted_msg = AES.dec(" U2FsdGVkX19bpp2GepmpgIJiBT+0L/jytlR/ZRD5rdE=", "your-p
 ## Requirements
 None.
 
+## Resources
+- [Wikipedia/AES](https://www.wikiwand.com/de/Advanced_Encryption_Standard)
+- [Cryptographie Tutorials by Morpheus Tutorials](https://www.youtube.com/watch?v=-nK32SkZdgY&list=PLNmsVeXQZj7pWwFv5APk240hrehtCJae-)
+
 ## Contact
 Email: contact@chaepy.net \
 Website: https://chaepy.net/
